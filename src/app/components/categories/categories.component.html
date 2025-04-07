@@ -1,0 +1,7 @@
+
+@for (categoria of categorias(); track categoria.id) {
+  <li class="flex items-center gap-1">
+    <input type="checkbox" id="categoria-{{ categoria.id }}">
+    <label for="categoria-{{ categoria.id }}">{{ categoria.name }}</label>
+  </li>
+}
