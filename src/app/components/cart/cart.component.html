@@ -1,0 +1,41 @@
+<section class="py-2">
+  <div class="container px-4 px-lg-5 my-5">
+    <table class="table table-bordered">
+      <thead>
+      <tr>
+
+        <th>
+          Producto
+        </th>
+        <th>
+          Precio Unitario
+        </th>
+        <th>
+          Cantidad
+        </th>
+        <th>
+          Total
+        </th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of carrito">
+
+        <td>{{ item.title }}</td>
+        <td>${{ item.price }}</td>
+        <td>{{ item.cantidad }}</td>
+        <td>${{ item.price * item.cantidad }}</td>
+      </tr>
+      </tbody>
+      <tfoot>
+      <tr>
+        <td colspan="3" class="text-end fw-bold">Total general:</td>
+        <td class="fw-bold">${{ totalGeneral }}</td>
+      </tr>
+      </tfoot>
+    </table>
+    <button class="btn btn-success" (click)="finalizarCompra()">
+      Finalizar Compra
+    </button>
+  </div>
+</section>

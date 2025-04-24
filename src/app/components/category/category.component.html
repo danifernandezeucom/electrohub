@@ -1,0 +1,11 @@
+<section class="py-2">
+  <div class="container px-4 px-lg-5 my-5">
+
+    <ul class="list-group">
+      @for (categoria of categorias(); track categoria.id) {
+        <li class="list-group-item">{{ categoria.name }}
+        </li>
+      }
+    </ul>
+  </div>
+</section>
